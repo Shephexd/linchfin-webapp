@@ -44,7 +44,7 @@ interface BacktestDataType {
 }
 
 const commonLineChartProperties = {
-    margin: { top: 50, right: 20, bottom: 25, left: 40 },
+    margin: { top: 40, right: 20, bottom: 25, left: 40 },
     animate: true,
     enableSlices: 'x',
     enableArea: true,
@@ -135,7 +135,7 @@ function PortfolioPage() {
                                     <ResponsivePie
                                         data={portfolioWeights}
                                         valueFormat=" >-.1%"
-                                        margin={{ top: 20, right: 20, bottom: 20, left: 20 }}
+                                        margin={{ top: 40, right: 20, bottom: 20, left: 20 }}
                                         innerRadius={0.5}
                                         padAngle={0.7}
                                         cornerRadius={2}
