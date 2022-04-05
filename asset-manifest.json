@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/linchfin-webapp/static/css/main.785033f8.css",
+    "main.js": "/linchfin-webapp/static/js/main.f44048c1.js",
+    "static/js/787.b921e113.chunk.js": "/linchfin-webapp/static/js/787.b921e113.chunk.js",
+    "index.html": "/linchfin-webapp/index.html",
+    "main.785033f8.css.map": "/linchfin-webapp/static/css/main.785033f8.css.map",
+    "main.f44048c1.js.map": "/linchfin-webapp/static/js/main.f44048c1.js.map",
+    "787.b921e113.chunk.js.map": "/linchfin-webapp/static/js/787.b921e113.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.785033f8.css",
+    "static/js/main.f44048c1.js"
+  ]
+}
