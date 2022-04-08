@@ -1,24 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import PortfolioPage from './pages/portfolio'
+import { Layout, Row, Col, Divider, Table, Spin } from 'antd';
+const {Header, Footer} = Layout;
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Layout className={"site-layout-background"}>
+        <Header id="header" style={{maxHeight: "48px"}}>
+          <span style={{display: "inline-block", verticalAlign: "middle", lineHeight: "normal"}}>
+          </span>
+        </Header>
+        <PortfolioPage/>
+        <Divider style={{margin: 0}}/>
+        <Footer id="footer">
+            <span style={{display: "inline-block", verticalAlign: "middle", lineHeight: "normal"}}>
+              Copyright shephexd Linchfin
+            </span>
+      </Footer>        
+      </Layout>   
     </div>
   );
 }
