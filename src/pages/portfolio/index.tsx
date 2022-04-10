@@ -45,6 +45,7 @@ interface BacktestDataType {
 
 const commonLineChartProperties = {
     margin: { top: 40, right: 20, bottom: 25, left: 40 },
+    pointLabelYOffset: -12,
     animate: true,
     enableSlices: 'x',
     enableArea: true,
@@ -129,7 +130,7 @@ function PortfolioPage() {
                 <Row justify="center" align="middle" gutter={[20, 20]}>
                     <Col span={24}>
                         <div className={"content-border-title"}>Model Portfolio</div>
-                        <div className={"content-border"} style={{ height: "30vh" }}>
+                        <div className={"content-border"} style={{ height: "40vh" }}>
                             {
                                 isEmpty(portfolioWeights) ? <Spin style={{ position: "absolute", top: "50%" }} /> :
                                     <ResponsivePie
