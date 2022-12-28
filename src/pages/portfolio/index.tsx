@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getRealtimeData } from "connectors/firebase"
+// import { getRealtimeData } from "connectors/firebase"
 import { Layout, Row, Col, Table, Spin } from 'antd';
 import { ResponsiveLine } from '@nivo/line';
 import { ResponsivePie } from '@nivo/pie';
@@ -86,42 +86,42 @@ function PortfolioPage() {
     const [tableData, setTableData] = useState<UniverseTableDataType>({ dataSource: [], columns: universeTableColumns });
 
     useEffect(() => {
-        if (isEmpty(backtestData.result)) {
-            getRealtimeData('backtest').then((bt) => {
-                if (!isEmpty(bt.result)) {
-                    setBacktestData(bt);
-                }
-                console.log(bt);
-            });
-        }
+//         if (isEmpty(backtestData.result)) {
+//             getRealtimeData('backtest').then((bt) => {
+//                 if (!isEmpty(bt.result)) {
+//                     setBacktestData(bt);
+//                 }
+//                 console.log(bt);
+//             });
+//         }
+//
+//         if (isEmpty(portfolioWeights)) {
+//             var weights: portfolioWeightType[] = []
+//             getRealtimeData('portfolio').then((p) => {
+//                 for (var k in p.weights) {
+//                     weights.push({
+//                         "id": k, "label": k, "value": p.weights[k]
+//                     })
+//                 }
+//                 setPortfolioWeights(weights);
+//             });
+//         }
 
-        if (isEmpty(portfolioWeights)) {
-            var weights: portfolioWeightType[] = []
-            getRealtimeData('portfolio').then((p) => {
-                for (var k in p.weights) {
-                    weights.push({
-                        "id": k, "label": k, "value": p.weights[k]
-                    })
-                }
-                setPortfolioWeights(weights);
-            });
-        }
-
-        if (isEmpty(tableData.dataSource)) {
-            var tableDataSource: UniverseTableDataSourceType[] = [];
-            getRealtimeData('universe').then((univ) => {
-                for (var symbol in univ) {
-                    tableDataSource.push(
-                        { key: symbol, symbol: symbol, ...univ[symbol] }
-                    )
-                    console.log(tableDataSource);
-                }
-                console.log(tableDataSource);
-                if (!isEmpty(tableDataSource)) {
-                    setTableData({ dataSource: tableDataSource, columns: universeTableColumns });
-                }
-            });
-        }
+//         if (isEmpty(tableData.dataSource)) {
+//             var tableDataSource: UniverseTableDataSourceType[] = [];
+//             getRealtimeData('universe').then((univ) => {
+//                 for (var symbol in univ) {
+//                     tableDataSource.push(
+//                         { key: symbol, symbol: symbol, ...univ[symbol] }
+//                     )
+//                     console.log(tableDataSource);
+//                 }
+//                 console.log(tableDataSource);
+//                 if (!isEmpty(tableDataSource)) {
+//                     setTableData({ dataSource: tableDataSource, columns: universeTableColumns });
+//                 }
+//             });
+//         }
     }, [portfolioWeights, tableData, backtestData])
 
     return (

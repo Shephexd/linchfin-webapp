@@ -17,8 +17,8 @@ function App() {
         </Header>
         <Routes>
           <Route path="/" element={<PortfolioPage />} />
-          <Route path="/portfolio" element={<PortfolioPage />} />
-          <Route path="/rebalancing" element={<RebalancingPage />} />
+{/*            <Route path="/portfolio" element={<PortfolioPage />} /> */}
+{/* //           <Route path="/rebalancing" element={<RebalancingPage />} /> */}
         </Routes>
         <Divider style={{ margin: 0 }} />
         <Footer id="footer">
